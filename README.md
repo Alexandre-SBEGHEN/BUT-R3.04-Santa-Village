@@ -46,7 +46,7 @@ Le guide court est [`AGENTS.md`](AGENTS.md). Les procédures détaillées sont d
 - **Commit** ([`.agents/skills/commit/SKILL.md`](.agents/skills/commit/SKILL.md)) : message Conventional Commits, type en anglais et description en français, seulement si `./mvnw verify` réussit et seulement sur demande.
 - **Note** ([`.agents/skills/notation/SKILL.md`](.agents/skills/notation/SKILL.md)) : estimation du code sur 60 points. L'oral et les documents ne sont pas inclus. Ce n'est pas la note finale.
 
-À l'ouverture d'une session, l'agent lit `.agents/HISTORY.md` et y ajoute une entrée en fin de tâche, selon [`.agents/templates/task.md`](.agents/templates/task.md). Ce journal est local : `.agents/.gitignore` l'ignore.
+À l'ouverture d'une session, l'agent lit `.agents/HISTORY.md` et y ajoute une entrée en fin de tâche, selon [`.agents/templates/task.md`](.agents/templates/task.md). Ce journal est local : `.agents/.gitignore` l'ignore. L'écriture de ce seul fichier est autorisée dans [`.grok/config.toml`](.grok/config.toml) : elle ne redemande pas l'accord. Toute autre écriture ou commande le demande encore.
 
 En pratique, on nomme la partie en cours (le village ou la colonie) et la question (un type, un cas limite, une erreur de build). L'agent donne une piste : la notion, la responsabilité du type, ou le cas à traiter. On peut aussi appeler une procédure par son nom : `/conception`, `/verify`, `/commit`, `/notation`.
 
