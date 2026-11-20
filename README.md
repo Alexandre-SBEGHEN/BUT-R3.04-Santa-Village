@@ -35,3 +35,9 @@ La vérification peut être lancée via la commande
 ./mvnw verify
 ```
 A noter que cette commande inclue la génération de la documentation.
+
+## Sources des sujets
+Les sujets de TD et le document de projet ont été retranscrits à partir des documents de Mickaël Martin Nevot.
+
+- Licence originale : [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr)
+- Document en ligne : https://www.mickael-martin-nevot.com
