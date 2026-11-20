@@ -62,8 +62,14 @@ une piste plus précise.
 
 Au début d'une session, lire `.agents/HISTORY.md`.
 Ce fichier est local : `.agents/.gitignore` l'ignore.
-S'il manque, le créer en suivant `.agents/templates/task.md`.
-Après une tâche, y ajouter une entrée selon ce modèle.
+S'il manque, le créer en suivant `.agents/templates/task.md`, sans entrée vide.
+
+N'y écrire que ce que la session suivante ne retrouverait pas ailleurs :
+une décision absente du code, de `AGENTS.md`, des skills et de `docs/`,
+un changement de partie en cours, ou un travail laissé ouvert.
+Une question, une explication, une piste ou une confirmation qui ne change rien :
+ne pas écrire.
+Quand une entrée est utile, suivre `.agents/templates/task.md`.
 L'écriture de ce seul fichier est déjà autorisée dans `.grok/config.toml`.
 Toute autre écriture ou commande demande encore l'accord.
 

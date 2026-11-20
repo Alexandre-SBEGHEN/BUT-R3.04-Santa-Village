@@ -2,6 +2,8 @@
 
 `.agents/HISTORY.md` est local à chaque personne et ignoré par Git.
 S'il manque, le créer avec le seul titre `# Historique`, puis ajouter l'entrée.
+N'ajouter une entrée que dans les cas listés dans `AGENTS.md`, section Session.
+Une question répondue sans décision ni fichier modifié n'a pas d'entrée.
 Copier le bloc ci-dessous à la fin du fichier. Une ligne par champ.
 Ne pas recopier une règle déjà écrite dans `AGENTS.md`, `.agents/skills/` ou `docs/`.
 Au-delà d'environ 150 lignes, condenser les entrées anciennes en une seule
