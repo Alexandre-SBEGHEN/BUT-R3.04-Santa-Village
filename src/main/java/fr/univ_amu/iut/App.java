@@ -6,6 +6,8 @@ package fr.univ_amu.iut;
 public class App {
     /**
      * Point d'entrée du programme.
+     *
+     * @param args Arguments lors de l'exécution.
      */
     public static void main(String[] args) {
         System.out.println("bonjour");
