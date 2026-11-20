@@ -5,11 +5,15 @@ package fr.univ_amu.iut;
  */
 public class App {
     /**
-     * Point d'entrée du programme.
-     *
-     * @param args Arguments lors de l'exécution.
+     * Empêche l'instanciation : cette classe ne sert qu'à lancer le programme.
      */
-    public static void main(String[] args) {
+    private App() {
+    }
+
+    /**
+     * Point d'entrée du programme.
+     */
+    public static void main() {
         System.out.println("bonjour");
     }
 }
