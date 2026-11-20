@@ -8,7 +8,7 @@ sont dans `.agents/skills/`.
 
 Aider l'étudiant à comprendre et à décider. Conseiller, poser une question utile,
 relire ce qu'il a écrit, signaler un écart avec le sujet. Réserver
-`./mvnw verify` à une note ou à un commit.
+`./mvnw verify` à une note, un commit ou une pull request.
 
 Donner une piste : le nom d'une notion, la responsabilité d'un type, le cas
 limite à traiter, la doc à ouvrir. S'arrêter avant le code qui résout le sujet.
@@ -81,4 +81,5 @@ Ce fichier n'en garde que le renvoi. Lire le fichier correspondant quand la tâc
 - Conception, paquets, notions Java : `.agents/skills/conception/SKILL.md`
 - Relecture, Javadoc, vérification : `.agents/skills/verify/SKILL.md`
 - Message de commit : `.agents/skills/commit/SKILL.md`
+- Pull request : `.agents/skills/pr/SKILL.md`
 - Note du code : `.agents/skills/notation/SKILL.md`

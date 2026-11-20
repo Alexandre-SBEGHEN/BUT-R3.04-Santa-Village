@@ -44,11 +44,12 @@ Le guide court est [`AGENTS.md`](AGENTS.md). Les procédures détaillées sont d
 - **Conception** ([`.agents/skills/conception/SKILL.md`](.agents/skills/conception/SKILL.md)) : modèle, paquets et notions Java. L'agent compare des découpages, il ne crée pas l'arborescence.
 - **Vérification** ([`.agents/skills/verify/SKILL.md`](.agents/skills/verify/SKILL.md)) : Javadoc, Checkstyle, SpotBugs, JUnit, et la lecture d'un échec de `./mvnw verify`.
 - **Commit** ([`.agents/skills/commit/SKILL.md`](.agents/skills/commit/SKILL.md)) : message Conventional Commits, type en anglais et description en français, seulement si `./mvnw verify` réussit et seulement sur demande.
+- **Pull request** ([`.agents/skills/pr/SKILL.md`](.agents/skills/pr/SKILL.md)) : but de la branche, travail regroupé, reste visible et résultat de `./mvnw verify`. Seulement sur demande.
 - **Note** ([`.agents/skills/notation/SKILL.md`](.agents/skills/notation/SKILL.md)) : estimation du code sur 60 points. L'oral et les documents ne sont pas inclus. Ce n'est pas la note finale.
 
 À l'ouverture d'une session, l'agent lit `.agents/HISTORY.md`. Il n'y ajoute une entrée, selon [`.agents/templates/task.md`](.agents/templates/task.md), que pour une décision, un changement de partie ou un travail laissé ouvert. Une question sans suite n'y figure pas. Ce journal est local : `.agents/.gitignore` l'ignore. L'écriture de ce seul fichier est autorisée dans [`.grok/config.toml`](.grok/config.toml) : elle ne redemande pas l'accord. Toute autre écriture ou commande le demande encore.
 
-En pratique, on nomme la partie en cours (le village ou la colonie) et la question (un type, un cas limite, une erreur de build). L'agent donne une piste : la notion, la responsabilité du type, ou le cas à traiter. On peut aussi appeler une procédure par son nom : `/conception`, `/verify`, `/commit`, `/notation`.
+En pratique, on nomme la partie en cours (le village ou la colonie) et la question (un type, un cas limite, une erreur de build). L'agent donne une piste : la notion, la responsabilité du type, ou le cas à traiter. On peut aussi appeler une procédure par son nom : `/conception`, `/verify`, `/commit`, `/pr`, `/notation`.
 
 ## Sources des sujets
 Les sujets de TD et le document de projet ont été retranscrits à partir des documents de Mickaël Martin Nevot.
