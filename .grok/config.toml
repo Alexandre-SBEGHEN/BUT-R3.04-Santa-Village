@@ -1,0 +1,8 @@
+# Écriture du journal local, sans redemander. Toute autre action reste soumise à l'accord.
+[permission]
+allow = [
+  "Edit(.agents/HISTORY.md)",
+  "Edit(**/.agents/HISTORY.md)",
+  "Write(.agents/HISTORY.md)",
+  "Write(**/.agents/HISTORY.md)",
+]
