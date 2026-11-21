@@ -3,7 +3,8 @@ name: pr
 description: >
   Prépare une pull request du projet Santa Village quand l'étudiant le demande.
   Titre Conventional Commits, corps en français : but de la branche, travail
-  fait, reste visible, résultat de ./mvnw verify. Déclencheurs : pull request,
+  fait, reste visible, résultat de ./mvnw verify s'il y a du code.
+  Déclencheurs : pull request,
   merge request, /pr.
 ---
 
@@ -31,4 +32,7 @@ Seulement ce qui est visible : une suite ouverte dans `.agents/HISTORY.md`, un p
 
 ## Vérification
 
-Lancer `./mvnw verify` et écrire son résultat. S'il échoue, suivre `.agents/skills/verify/SKILL.md`.
+Lancer `./mvnw verify` seulement si le diff depuis la base touche le code,
+selon `.agents/skills/verify/SKILL.md`. Écrire le résultat. S'il n'y a pas
+de code, écrire que Maven n'a pas été lancé. S'il échoue, suivre
+`.agents/skills/verify/SKILL.md`.
