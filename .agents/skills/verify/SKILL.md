@@ -16,7 +16,7 @@ le build.
 Si SpotBugs signale `Unsupported class file major version`, le JDK 25
 est introuvable sur la machine. Ce n'est pas un défaut du code.
 
-Checkstyle exige une Javadoc anglaise sur chaque type et chaque méthode,
+Checkstyle exige une Javadoc française sur chaque type et chaque méthode,
 y compris privées, avec `@param`, `@return` et `@throws` lorsqu'ils s'appliquent.
 La génération Javadoc utilise `doclint` en mode `all`.
 
