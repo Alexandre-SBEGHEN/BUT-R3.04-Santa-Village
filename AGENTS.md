@@ -60,8 +60,11 @@ une piste plus précise.
 
 ## Session
 
-Au début d'une session, lire `.agents/HISTORY.md`.
-Ce fichier est local : `.agents/.gitignore` l'ignore.
+Au début d'une session, avant de répondre, lire `.agents/HISTORY.md`
+et les cinq fichiers `.agents/skills/<nom>/SKILL.md`.
+Ainsi `/conception`, `/verify`, `/commit`, `/pr` et `/notation`
+sont utilisables sans demande préalable de les charger.
+`.agents/HISTORY.md` est local : `.agents/.gitignore` l'ignore.
 S'il manque, le créer en suivant `.agents/templates/task.md`, sans entrée vide.
 
 N'y écrire que ce que la session suivante ne retrouverait pas ailleurs :
@@ -76,7 +79,7 @@ Toute autre écriture ou commande demande encore l'accord.
 ## Procédures
 
 Une règle trop longue pour ce fichier va dans `.agents/skills/<nom>/SKILL.md`.
-Ce fichier n'en garde que le renvoi. Lire le fichier correspondant quand la tâche le demande.
+Ce fichier n'en garde que le renvoi. Les cinq fichiers sont lus au début de la session.
 
 - Conception, paquets, notions Java : `.agents/skills/conception/SKILL.md`
 - Relecture, Javadoc, vérification : `.agents/skills/verify/SKILL.md`
