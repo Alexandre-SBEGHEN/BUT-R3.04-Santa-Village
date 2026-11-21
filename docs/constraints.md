@@ -25,7 +25,7 @@ L'atelier ne peut avoir qu'un seul type d'occupant : soit `Sprite`, soit `Fairy`
 On veut que les lutins **ET** les fées de Noël puissent y entrer.
 
 ### Solution
-Accepter tous les humanoïdes (`Humanoid`), mais lancer une exception si ce n'est si un lutin (`Sprite`), ni une fée (`Fairy`).
+Accepter tous les humanoïdes (`Humanoid`), mais lancer une exception si ce n'est ni un lutin (`Sprite`), ni une fée (`Fairy`).
 
 ## Classe `MagicSchool` (école de magie)
 
