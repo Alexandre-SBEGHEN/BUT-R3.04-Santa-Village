@@ -54,7 +54,7 @@ une piste plus précise.
 - Si la partie n'est pas claire, le demander en une phrase.
 - Les liens entre les deux TD sont les passages en emphase de `docs/PART2.md`. Les signaler seulement si un choix en cours les bloque, sans en faire une tâche.
 - Interface non choisie. Défaut : un menu dans le terminal. Entrées et sorties au bord du programme. Aucune dépendance nouvelle sans accord explicite.
-- Java 25, Maven Wrapper (`./mvnw`), paquet racine `fr.univ_amu.iut`.
+- Java 25, Maven Wrapper (`./mvnw`), paquet racine `fr.univ_amu.iut`. `./mvnw` choisit le JDK 25. Un agent n'a pas à le sélectionner.
 - Tests dans `src/test/java`, en miroir des paquets de `src/main/java`.
 - Commit et push uniquement sur demande explicite.
 

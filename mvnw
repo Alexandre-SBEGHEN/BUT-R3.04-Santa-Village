@@ -41,6 +41,46 @@ CYGWIN* | MINGW*)
   ;;
 esac
 
+# Le projet se construit avec le JDK 25. Un JDK plus récent fait échouer
+# SpotBugs même quand le code est correct. Le choix est ici, pour que
+# chaque agent et chaque terminal lancent le même runtime.
+java_spec() {
+  "$1" -version 2>&1 | sed -n 's/.* version "\([^"]*\)".*/\1/p' | head -n 1 || true
+}
+
+use_jdk25=0
+if [ -n "${JAVA_HOME-}" ] && [ -x "${JAVA_HOME}/bin/java" ]; then
+  case "$(java_spec "${JAVA_HOME}/bin/java")" in
+    25 | 25.*) use_jdk25=1 ;;
+  esac
+fi
+
+if [ "$use_jdk25" -eq 0 ]; then
+  jdk25=""
+  if [ -x /usr/libexec/java_home ]; then
+    jdk25="$(/usr/libexec/java_home -v 25 2>/dev/null || true)"
+  fi
+  if [ -z "$jdk25" ]; then
+    for candidate in \
+      /usr/lib/jvm/java-25-openjdk \
+      /usr/lib/jvm/java-25-openjdk-amd64 \
+      /usr/lib/jvm/java-25-openjdk-arm64 \
+      /usr/lib/jvm/jdk-25 \
+      /Library/Java/JavaVirtualMachines/jdk-25.jdk/Contents/Home
+    do
+      if [ -x "$candidate/bin/java" ]; then
+        jdk25=$candidate
+        break
+      fi
+    done
+  fi
+  if [ -n "$jdk25" ] && [ -x "$jdk25/bin/java" ]; then
+    JAVA_HOME=$jdk25
+    export JAVA_HOME
+  fi
+fi
+unset use_jdk25 jdk25 candidate
+
 # set JAVACMD and JAVACCMD
 set_java_home() {
   # For Cygwin and MinGW, ensure paths are in Unix format before anything is touched
