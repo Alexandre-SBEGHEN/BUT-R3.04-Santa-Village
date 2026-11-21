@@ -14,7 +14,7 @@ Rien ne nous empêche d'en créer plusieurs dans la simulation
 Si on essaie de placer une maison du Père Noël alors qu'une autre existe déjà, lancer une exception.
 
 ## Classe `ClockTower` (tour de l'horloge)
-Contraintes identiques à celles de `MagicSchool`.
+Contraintes identiques à celles de `SantaHouse`.
 
 ## Classe `Workshop` (atelier de fabrication)
 
