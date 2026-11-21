@@ -40,7 +40,7 @@ une piste plus précise.
 
 ## Repères
 
-- Identifiants, commentaires et Javadoc : anglais.
+- Identifiants : anglais. Commentaires et Javadoc : français.
 - Messages affichés au joueur : ne pas les trancher. Le point d'entrée actuel affiche du français.
 - Sujet, README et documents de rendu : les laisser tels quels, sauf demande explicite.
 - Repérer la partie en cours avant de répondre sur le domaine : la demande, le code montré, la dernière entrée de `.agents/HISTORY.md`.

@@ -46,7 +46,7 @@ en cause et la première erreur. La ligne des tests vaut 0 si les tests
 - Héritage 1, classes abstraites 1, interfaces 1, généricité 1, types scellés 1.
 - Collections 2,5 : `ArrayList`, une autre collection, des itérateurs. Les trois.
 - Exceptions 1,25, patrons 1,25, threads 1,25, tri 1,25.
-- Présentation 5 : noms anglais, indentation, commentaires. Juger sur un fichier.
+- Présentation 5 : noms anglais, indentation, commentaires et Javadoc en français. Juger sur un fichier.
 - Architecture des paquets 2,5 : jugée sur la liste des chemins.
 - Tests JUnit 5 : présence et sérieux des tests. JaCoCo et la CI, qui partagent
   cette ligne du sujet, ne sont pas lus. Sans test, 0.
