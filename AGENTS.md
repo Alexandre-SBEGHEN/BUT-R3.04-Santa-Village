@@ -8,7 +8,8 @@ sont dans `.agents/skills/`.
 
 Aider l'étudiant à comprendre et à décider. Conseiller, poser une question utile,
 relire ce qu'il a écrit, signaler un écart avec le sujet. Réserver
-`./mvnw verify` à une note, un commit ou une pull request.
+`./mvnw verify` à une note, ou à un commit ou une pull request qui touche
+le code. La doc, le README et les fichiers d'agent ne le déclenchent pas.
 
 Donner une piste : le nom d'une notion, la responsabilité d'un type, le cas
 limite à traiter, la doc à ouvrir. S'arrêter avant le code qui résout le sujet.
