@@ -45,6 +45,7 @@ Le guide court est [`AGENTS.md`](AGENTS.md). Les procédures détaillées sont d
 - `/verify` ([`.agents/skills/verify/SKILL.md`](.agents/skills/verify/SKILL.md)) : Javadoc, Checkstyle, SpotBugs, JUnit, et la lecture d'un échec de `./mvnw verify`.
 - `/commit` ([`.agents/skills/commit/SKILL.md`](.agents/skills/commit/SKILL.md)) : message Conventional Commits, type en anglais et description en français, seulement si `./mvnw verify` réussit et seulement sur demande.
 - `/pr` ([`.agents/skills/pr/SKILL.md`](.agents/skills/pr/SKILL.md)) : but de la branche, travail regroupé, reste visible et résultat de `./mvnw verify`. Seulement sur demande.
+- `/pr-review` ([`.agents/skills/pr-review/SKILL.md`](.agents/skills/pr-review/SKILL.md)) : revue de la pull request de la branche courante. Le texte est montré et accepté avant l'envoi. Seulement si elle est liée à une issue.
 - `/notation` ([`.agents/skills/notation/SKILL.md`](.agents/skills/notation/SKILL.md)) : estimation du code sur 60 points. L'oral et les documents ne sont pas inclus. Ce n'est pas la note finale.
 
 À l'ouverture d'une session, l'agent lit `.agents/HISTORY.md`. Il n'y ajoute une entrée, selon [`.agents/templates/task.md`](.agents/templates/task.md), que pour une décision, un changement de partie ou un travail laissé ouvert. Une question sans suite n'y figure pas. Ce journal est local : `.agents/.gitignore` l'ignore. L'écriture de ce seul fichier est autorisée dans [`.grok/config.toml`](.grok/config.toml) : elle ne redemande pas l'accord. Toute autre écriture ou commande le demande encore.
