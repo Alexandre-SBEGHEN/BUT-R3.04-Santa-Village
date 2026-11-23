@@ -58,6 +58,7 @@ une piste plus précise.
 - Java 25, Maven Wrapper (`./mvnw`), paquet racine `fr.univ_amu.iut`. `./mvnw` choisit le JDK 25. Un agent n'a pas à le sélectionner.
 - Tests dans `src/test/java`, en miroir des paquets de `src/main/java`.
 - Commit et push uniquement sur demande explicite.
+- Pas de signature d'agent sur un commit, par défaut. Ni auteur, ni committer, ni `Co-authored-by`, sauf demande explicite dans cette demande. Détail : `.agents/skills/commit/SKILL.md`.
 
 ## Session
 
