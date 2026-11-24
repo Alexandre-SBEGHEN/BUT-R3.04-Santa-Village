@@ -37,7 +37,6 @@ public abstract class Character implements Playable{
 
     /**
      * Retourne le nom du personnage.
-     * Compris entre 0 et 1.
      *
      * @return le nom.
      */
@@ -47,7 +46,6 @@ public abstract class Character implements Playable{
 
     /**
      * Retourne le sexe du personnage.
-     * Compris entre 0 et 1.
      *
      * @return le sexe.
      */
@@ -57,7 +55,6 @@ public abstract class Character implements Playable{
 
     /**
      * Retourne l'âge du personnage.
-     * Compris entre 0 et 1.
      *
      * @return l'âge.
      */
