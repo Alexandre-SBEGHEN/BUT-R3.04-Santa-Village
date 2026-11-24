@@ -11,7 +11,7 @@ package fr.univ_amu.iut.food;
  * </ul>
  * <p>
  * Des catégories supplémentaires pourront
- * être ajoutés ultérieurement.
+ * être ajoutées ultérieurement.
  *
  * @author Alexandre SBEGHEN
  */
@@ -24,7 +24,7 @@ public enum FoodType {
     private String name;
 
     /**
-     * Le constucteur de la classe.
+     * Le constructeur de la classe.
      *
      * @param name Le type de nourriture.
      */
