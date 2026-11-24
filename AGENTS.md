@@ -64,7 +64,7 @@ une piste plus précise.
 
 Au début d'une session, avant de répondre, lire `.agents/HISTORY.md`
 et les six fichiers `.agents/skills/<nom>/SKILL.md`.
-Ainsi `/conception`, `/verify`, `/commit`, `/pr`, `/notation` et `/pr-summary`
+Ainsi `/conception`, `/verify`, `/commit`, `/pr`, `/notation`, `/pr-summary` et `/pr-review`
 sont utilisables sans demande préalable de les charger.
 `.agents/HISTORY.md` est local : `.agents/.gitignore` l'ignore.
 S'il manque, le créer en suivant `.agents/templates/task.md`, sans entrée vide.
@@ -89,3 +89,4 @@ Ce fichier n'en garde que le renvoi. Les six fichiers sont lus au début de la s
 - Pull request : `.agents/skills/pr/SKILL.md`
 - Note du code : `.agents/skills/notation/SKILL.md`
 - Résumé d'une pull request : `.agents/skills/pr-summary/SKILL.md`
+- Revue d'une pull request : `.agents/skills/pr-review/SKILL.md`
