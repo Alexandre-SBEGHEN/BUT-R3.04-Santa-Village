@@ -58,12 +58,13 @@ une piste plus précise.
 - Java 25, Maven Wrapper (`./mvnw`), paquet racine `fr.univ_amu.iut`. `./mvnw` choisit le JDK 25. Un agent n'a pas à le sélectionner.
 - Tests dans `src/test/java`, en miroir des paquets de `src/main/java`.
 - Commit et push uniquement sur demande explicite.
+- Pas de signature d'agent sur un commit, par défaut. Ni auteur, ni committer, ni `Co-authored-by`, sauf demande explicite dans cette demande. Détail : `.agents/skills/commit/SKILL.md`.
 
 ## Session
 
 Au début d'une session, avant de répondre, lire `.agents/HISTORY.md`
 et les six fichiers `.agents/skills/<nom>/SKILL.md`.
-Ainsi `/conception`, `/verify`, `/commit`, `/pr`, `/notation` et `/pr-review`
+Ainsi `/conception`, `/verify`, `/commit`, `/pr`, `/notation`, `/pr-summary` et `/pr-review`
 sont utilisables sans demande préalable de les charger.
 `.agents/HISTORY.md` est local : `.agents/.gitignore` l'ignore.
 S'il manque, le créer en suivant `.agents/templates/task.md`, sans entrée vide.
@@ -87,4 +88,5 @@ Ce fichier n'en garde que le renvoi. Les six fichiers sont lus au début de la s
 - Message de commit : `.agents/skills/commit/SKILL.md`
 - Pull request : `.agents/skills/pr/SKILL.md`
 - Note du code : `.agents/skills/notation/SKILL.md`
+- Résumé d'une pull request : `.agents/skills/pr-summary/SKILL.md`
 - Revue d'une pull request : `.agents/skills/pr-review/SKILL.md`

@@ -26,3 +26,11 @@ Un bâtiment sale et sans occupant peut être remis en état.
 ```
 
 Types usuels : `feat`, `fix`, `docs`, `test`, `refactor`, `chore`.
+
+## Identité
+
+Ne pas changer l'auteur ni le committer. Ne pas ajouter de trailer `Co-authored-by`.
+
+Le défaut est désactivé. Ne pas demander à signer.
+
+N'ajouter une signature que si l'utilisateur le demande explicitement dans la demande de commit concernée.
