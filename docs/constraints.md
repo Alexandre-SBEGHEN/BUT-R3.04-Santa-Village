@@ -2,41 +2,56 @@
 
 Ce document contient des règles d'admission et de refus que le diagramme de classes ne peut pas exprimer.
 
-## Classe `SantaHouse` (maison du Père Noël)
+## Les personnages
 
-### Situation
+### Classe `Character` (personnage quelconque)
+
+#### Situation
+Les méthodes `increaseHunger()` et `increaseFatigue()` font **baisser** les jauges de faim et d'énergie. 
+
+#### Problème
+Un nombre négatif en paramètre ferait augmenter la satiété `saturation` et l'énergie `energy`
+
+#### Solution
+Lance une exception si un nombre négatif ( $\le 0$ ) est entré en argument.
+
+## Les bâtiments
+
+### Classe `SantaHouse` (maison du Père Noël)
+
+#### Situation
 La maison du Père Noël est un bâtiment unique.
 
-### Problème
+#### Problème
 Rien ne nous empêche d'en créer plusieurs dans la simulation
 
-### Solution
+#### Solution
 Si on essaie de placer une maison du Père Noël alors qu'une autre existe déjà, lancer une exception.
 
-## Classe `ClockTower` (tour de l'horloge)
+### Classe `ClockTower` (tour de l'horloge)
 Contraintes identiques à celles de `SantaHouse`.
 
-## Classe `Workshop` (atelier de fabrication)
+### Classe `Workshop` (atelier de fabrication)
 
-### Situation
+#### Situation
 L'atelier ne peut avoir qu'un seul type d'occupant : soit `Sprite`, soit `Fairy`.
 
-### Problème
+#### Problème
 On veut que les lutins **ET** les fées de Noël puissent y entrer.
 
-### Solution
+#### Solution
 Accepter tous les humanoïdes (`Humanoid`), mais lancer une exception si ce n'est ni un lutin (`Sprite`), ni une fée (`Fairy`).
 
-## Classe `MagicSchool` (école de magie)
+### Classe `MagicSchool` (école de magie)
 
-### Situation
+#### Situation
 Les écoles peuvent accueillir les créatures fantastiques.
 
-### Problème
+#### Problème
 Les créatures incluent des personnages non fantastiques, et l'interface `FantasticBeing` est implémentée par des personnages non créatures.
 
-### Solution
+#### Solution
 Accepter toutes les créatures, mais lancer une exception si elle n'est pas fantastique (= n'implémente pas `FantasticBeing`).
 
-## Classe `PlayArea` (aire de jeux)
+### Classe `PlayArea` (aire de jeux)
 Contraintes identiques à celles de `MagicSchool`.
