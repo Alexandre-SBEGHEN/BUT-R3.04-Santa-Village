@@ -6,10 +6,7 @@ package fr.univ_amu.iut.character;
  * @author Kawthar CHAIB EDDOUR
  */
 
-public abstract class Character implements Playable{
-    private static final double HUNGER_INCREMENT = 0.1;
-    private static final double FATIGUE_INCREMENT = 0.05;
-    private static final double MAGIC_INCREMENT = 0.2;
+public abstract class Character implements Playable {
 
     private String name;
     private Sex sex;
@@ -94,22 +91,28 @@ public abstract class Character implements Playable{
 
     /**
      * Augmente la valeur de la faim.
+     *
+     * @param amount la valeur à augmenter.
      */
-    public void increaseHunger() {
-        hunger.increase(HUNGER_INCREMENT);
+    public void increaseHunger(double amount) {
+        hunger.increase(amount);
     }
 
     /**
      * Augmente la valeur de la fatigue.
+     *
+     * @param amount la valeur à augmenter.
      */
-    public void increaseFatigue() {
-        fatigue.increase(FATIGUE_INCREMENT);
+    public void increaseFatigue(double amount) {
+        fatigue.increase(amount);
     }
 
     /**
      * Augmente la valeur de la magie.
+     *
+     * @param amount la valeur à augmenter.
      */
-    public void increaseMagic() {
-        magic.increase(MAGIC_INCREMENT);
+    public void increaseMagic(double amount) {
+        magic.increase(amount);
     }
 }
