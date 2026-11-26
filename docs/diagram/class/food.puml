@@ -1,0 +1,31 @@
+@startuml
+
+FoodType <... Food
+
+enum FoodType {
+ SOLID
+ LIQUID
+
+ - name: String
+
+ + getName(): String
+}
+
+enum Food {
+ BISCUIT
+ HOT_CHOCOLATE
+ MARSHMALLOW
+ OATMEAL
+ BARLEY_SUGAR
+ CANDY
+
+ - name: String
+ - type: FoodType
+ - value: double
+
+ + getName(): String
+ + getType(): FoodType
+ + getValue(): double
+}
+
+@enduml
