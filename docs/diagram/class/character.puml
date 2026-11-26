@@ -1,0 +1,145 @@
+@startuml
+
+/'
+    Liaisons
+'/
+
+Sex <.. Character
+Stamina <---* Character
+Playable <|.. Character
+
+Humanoid -up-|> Character
+Creature -up-|> Character
+
+Visitor -up-|> Humanoid
+Sprite -up-|> Humanoid
+Elf -up-|> Humanoid
+Fairy -up-|> Humanoid
+
+Lycanthrope -up-|> Creature
+Snowman -up-|> Creature
+Spirit -up-|> Creature
+Reindeer -up-|> Creature
+
+Visitor .down.|> SelfEntertainable
+Sprite .down.|> SelfEntertainable
+
+Sprite .down.|> Worker
+Elf .down.|> Worker
+Fairy .down.|> Worker
+
+Sprite .down.|> FantasticBeing
+Fairy .down.|> FantasticBeing
+Lycanthrope .down.|> FantasticBeing
+Snowman .down.|> FantasticBeing
+Spirit .down.|> FantasticBeing
+
+/'
+    Classes
+'/
+
+enum Sex {
+ MALE
+ FEMALE
+
+ - name: String
+
+ + getName(): String
+}
+
+class Stamina {
+ - value : double
+
+ + get(): double
+ + increase(amount: double): void
+}
+
+interface Playable {
+ + {abstract} emit(): void
+ + {abstract} move(building: OccupiableBuilding<?>): void
+ + {abstract} eat(food: Food): void
+ + {abstract} activity(): void
+}
+
+abstract class Character {
+ - name: String
+ - sex: Sex
+ - age: int
+ - satiation: Stamina
+ - energy: Stamina
+ - magic: Stamina
+
+ + getName(): String
+ + getSex(): Sex
+ + getAge(): int
+ + getSatiation(): double
+ + increaseHunger(amount: double): void
+ + getEnergy(): double
+ + increaseFatigue(amount: double): void
+ + getMagic(): double
+
+ + emit(): void
+ + move(building: OccupiableBuilding<?>): void
+ + eat(food: Food): void
+ + rest(): void
+ + activity(): void
+}
+
+' Types de personnages
+abstract class Humanoid
+abstract class Creature
+
+' Humanoïdes
+class Visitor {
+ + enjoy(): void
+}
+
+class Sprite {
+ - prankster: bool
+
+ + isPrankstering(): bool
+ + enjoy(): void
+ + work(): void
+ + beFantastic(): void
+}
+
+
+class Elf {
+ + work(): void
+}
+
+class Fairy {
+ + work(): void
+ + beFantastic(): void
+}
+
+' Créatures
+class Lycanthrope {
+ + beFantastic(): void
+}
+
+class Snowman {
+ + beFantastic(): void
+}
+
+class Spirit {
+ + beFantastic(): void
+}
+
+class Reindeer
+
+' Ce que les personnages peuvent faire
+
+interface SelfEntertainable {
+ + {abstract} enjoy(): void
+}
+
+interface Worker {
+ + {abstract} work(): void
+}
+
+interface FantasticBeing {
+ + {abstract} beFantastic(): void
+}
+
+@enduml

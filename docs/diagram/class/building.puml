@@ -1,0 +1,106 @@
+@startuml
+
+/'
+    Liaisons
+'/
+
+Cleanliness <.. Building
+
+SantaHouse --up-|> Building
+ClockTower --up-|> Building
+Pantry --up-|> Building
+OccupiableBuilding --up-|> Building
+
+Dormitory -----up-|> OccupiableBuilding : <<bind>> Occupant: Humanoid
+Enclosure -----up-|> OccupiableBuilding : <<bind>> Occupant: Species
+CandyShop -----up-|> OccupiableBuilding : <<bind>> Occupant: Character
+Workshop -----up-|> OccupiableBuilding : <<bind>> Occupant: Humanoid
+PostOffice -----up-|> OccupiableBuilding : <<bind>> Occupant: Elf
+MagicSchool -----up-|> OccupiableBuilding : <<bind>> Occupant: Creature
+ToyShop -----up-|> OccupiableBuilding : <<bind>> Occupant: Humanoid
+PlayArea -----up-|> OccupiableBuilding : <<bind>> Occupant: Creature
+
+/'
+    Classes
+'/
+
+enum Cleanliness {
+ GOOD
+ FAIR
+ BAD
+
+ - name: String
+
+ + getName(): String
+}
+
+' Bâtiments qui n'accueillent pas
+
+abstract class Building {
+ - open: boolean
+ - area: double
+ - cleanliness: Cleanliness
+
+ + isOpen(): boolean
+ + getArea(): double
+ + getCleanliness(): Cleanliness
+}
+
+class SantaHouse
+
+class ClockTower {
+ + totalMagic(): double
+ + time(): Time
+}
+
+class Pantry {
+ - stock: Map<Food, Integer>
+
+ + getStock(): Map<Food, Integer>
+}
+
+' Bâtiments qui accueillent
+
+abstract OccupiableBuilding<Occupant: Character> {
+ - capacity: int
+ - occupants: Set<Occupant>
+
+ + getCapacity(): int
+ + getNumberOfOccupants(): int
+ + getOccupants(): Set<Occupant>
+ + {abstract} welcome(character: Occupant): void
+}
+
+class Dormitory<WhichSex: Sex> {
+ + welcome(character: Occupant): void
+}
+
+class Enclosure<Species: Creature> {
+ + welcome(character: Occupant): void
+}
+
+class CandyShop {
+ + welcome(character: Occupant): void
+}
+
+class Workshop {
+ + welcome(character: Occupant): void
+}
+
+class PostOffice {
+ + welcome(character: Occupant): void
+}
+
+class MagicSchool {
+ + welcome(character: Occupant): void
+}
+
+class ToyShop {
+ + welcome(character: Occupant): void
+}
+
+class PlayArea {
+ + welcome(character: Occupant): void
+}
+
+@enduml
