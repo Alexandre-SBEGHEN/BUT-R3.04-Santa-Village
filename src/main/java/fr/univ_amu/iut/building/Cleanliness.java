@@ -6,12 +6,12 @@ package fr.univ_amu.iut.building;
  * @author Alexandre SBEGHEN
  */
 public enum Cleanliness {
-    /** Bâtiment propre. */
-    GOOD("Propre"),
     /** Bâtiment moyennement propre. */
     FAIR("Acceptable"),
     /** Bâtiment sale. */
-    BAD("Sale");
+    BAD("Sale"),
+    /** Bâtiment propre. */
+    GOOD("Propre");
 
     private final String name;
 
