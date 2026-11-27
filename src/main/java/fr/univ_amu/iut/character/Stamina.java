@@ -25,16 +25,8 @@ public class Stamina {
      *
      * @return La valeur de la jauge.
      */
-    public double getValue() {
+    public double get() {
         return value;
-    }
-    /**
-     * Définit une nouvelle valeur pour la jauge.
-     *
-     * @param value La nouvelle valeur de la jauge
-     */
-    public void setValue(double value) {
-        this.value = Math.clamp(value, 0, 1);
     }
 
     /**
@@ -43,7 +35,7 @@ public class Stamina {
      *
      * @param value Valeur à incrémenter / décrémenter.
      */
-    public void increase(double value) {
+    public void change(double value) {
         this.value += value;
         this.value = Math.clamp(this.value, 0, 1);
     }
