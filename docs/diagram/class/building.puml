@@ -25,9 +25,9 @@ PlayArea -----up-|> OccupiableBuilding : <<bind>> Occupant: Creature
 '/
 
 enum Cleanliness {
- GOOD
- FAIR
  BAD
+ FAIR
+ GOOD
 
  - name: String
 
