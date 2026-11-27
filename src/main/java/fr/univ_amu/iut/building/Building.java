@@ -65,10 +65,9 @@ public abstract class Building {
      * degré le plus sale.
      */
     public void toGetDirtier() {
-        int cleanlinessIndex = this.cleanliness.ordinal();
-        if (cleanlinessIndex == 0)
+        if (this.cleanliness == Cleanliness.BAD)
             return;
 
-        this.cleanliness = Cleanliness.values()[cleanlinessIndex - 1];
+        this.cleanliness = Cleanliness.values()[this.cleanliness.ordinal() - 1];
     }
 }
