@@ -57,7 +57,12 @@ class ClockTower {
 class Pantry {
  - stock: Map<Food, Integer>
 
+ <<create>> Pantry(open: boolean, area: double, defaultStock: int): void
+ <<create>> Pantry(open: boolean, area: double): void
+ - initializeStock(int defaultStock): void
  + getStock(): Map<Food, Integer>
+ + take(food: Food, howMany: int): int
+ + take(food: Food): int
 }
 
 ' Bâtiments qui accueillent
