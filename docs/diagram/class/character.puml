@@ -51,7 +51,7 @@ class Stamina {
  - value : double
 
  + get(): double
- + increase(amount: double): void
+ + change(amount: double): void
 }
 
 interface Playable {
