@@ -41,7 +41,7 @@ public abstract class Character implements Playable {
     /**
      * Permet de connaître le nom du personnage.
      *
-     * @return le nom.
+     * @return Le nom.
      */
     public String getName() {
         return name;
@@ -50,7 +50,7 @@ public abstract class Character implements Playable {
     /**
      * Permet de connaître le sexe du personnage.
      *
-     * @return le sexe.
+     * @return Le sexe.
      */
     public Sex getSex() {
         return sex;
@@ -59,7 +59,7 @@ public abstract class Character implements Playable {
     /**
      * Permet de connaître l'âge du personnage.
      *
-     * @return l'âge.
+     * @return L'âge.
      */
     public int getAge() {
         return age;
@@ -70,10 +70,10 @@ public abstract class Character implements Playable {
      * actuel de la faim du personnage.
      * Compris entre 0 et 1.
      *
-     * @return la valeur de la faim.
+     * @return La valeur de la faim.
      */
     public double getSatiation() {
-        return satiation.getValue();
+        return satiation.get();
     }
 
     /**
@@ -88,7 +88,7 @@ public abstract class Character implements Playable {
      * @return Le niveau de forme.
      */
     public double getEnergy() {
-        return energy.getValue();
+        return energy.get();
     }
 
     /**
@@ -100,44 +100,48 @@ public abstract class Character implements Playable {
      *      0 = Fatigue extrême
      * </pre>
      *
-     * @return la valeur de magie.
+     * @return La valeur de magie.
      */
     public double getMagic() {
-        return magic.getValue();
+        return magic.get();
     }
 
     /**
-     * Augmente la valeur de la faim.
+     * Diminue le niveau de satiété du personnage,
+     * ce qui augmente sa faim.
      *
-     * @param amount la valeur à augmenter.
+     * @param amount La valeur à diminuer.
+     * @throws IllegalArgumentException Si amount est inférieur ou égal à 0.
      */
     public void increaseHunger(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("La valeur doit être suérieur à 0.");
         }
-        satiation.increase(amount);
+        satiation.change(-amount);
     }
 
     /**
      * Retourne vrai si le personnag est en train de se reposer,
      * et false s'il est pas.
      *
-     * @return est ce que le personnage se repose ?
+     * @return Est-ce que le personnage se repose ?
      */
     public boolean isResting() {
         return resting;
     }
 
     /**
-     * Augmente la valeur de la fatigue.
+     * Diminue le niveau d'énergie du personnage,
+     * ce qui augmente sa fatigue.
      *
-     * @param amount la valeur à augmenter.
+     * @param amount La valeur à diminuer.
+     * @throws IllegalArgumentException Si amount est inférieur ou égal à 0.
      */
     public void increaseFatigue(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("La valeur doit être suérieur à 0.");
         }
-        energy.increase(amount);
+        energy.change(-amount);
     }
 
     /**
@@ -146,7 +150,7 @@ public abstract class Character implements Playable {
      * @param amount la valeur à augmenter.
      */
     public void increaseMagic(double amount) {
-        magic.increase(amount);
+        magic.change(amount);
     }
 
     /**
@@ -183,7 +187,7 @@ public abstract class Character implements Playable {
         if(resting) {
             throw new IllegalStateException("Le personnage ne peut pas manger pendant son repos.");
         }
-        this.satiation.increase(food.getValue());
+        this.satiation.change(food.getValue());
     }
 
     /**
@@ -194,7 +198,7 @@ public abstract class Character implements Playable {
     public void rest() {
         //TODO le personnage peut pas manger pendant son repos
         this.resting = true;
-        this.energy.increase(random.nextDouble());
+        this.energy.change(random.nextDouble());
     }
 
     /**

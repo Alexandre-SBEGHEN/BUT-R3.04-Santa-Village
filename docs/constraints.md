@@ -1,3 +1,4 @@
+
 # Contraintes absentes du diagramme UML
 
 Ce document contient des règles d'admission et de refus que le diagramme de classes ne peut pas exprimer.
